@@ -1,0 +1,33 @@
+<!--Assignment 2: Check if a Number is Even or Odd
+Problem: Create a JavaScript program that takes a number as input from the user and determines
+whether the number is even or odd.-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Even or Odd</title>
+
+    <script>
+      function check(){
+        let number = parseInt(document.getElementById("inputNumber").value);
+        if (number%2==0){
+          document.getElementById("result").textContent = number + " is even";
+        }
+        else{
+          document.getElementById("result").textContent = number + " is odd"
+
+        }
+      }
+    </script>
+
+    <body>
+      <h2>Check if a number is even or odd</h2>
+      <p>Enter a number to check: </p>
+
+      <input type="number" id="inputNumber" placeholder="Enter a number">
+      <button onclick="check()">Check</button>
+      <p id="result"></p>
+    </body>
+</head>

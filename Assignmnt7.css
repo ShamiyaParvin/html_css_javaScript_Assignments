@@ -1,0 +1,44 @@
+.navbar{
+  background-color: rgb(99, 88, 88);
+  
+}
+
+.nav-section{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.nav-section li{
+  margin: 0;
+}
+
+.nav-section li a{
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 15px 20px;
+  text-decoration: none;
+}
+
+.nav-section a:hover{
+  color: rgb(238, 204, 181);
+  background-color: black;
+}
+
+@media(max-width: 600px){
+  .nav-section{
+    flex-direction: column; /* to stack items vertically */
+    align-items: center;
+  }
+  .nav-section li{
+    width: 100%;
+  }
+  .nav-section li a{
+    text-align: left;
+    padding: 15px;
+    width: 100%;
+  }
+}

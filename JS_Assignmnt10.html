@@ -1,0 +1,47 @@
+<!-- Assignment 10: Tip Calculator
+Objective: Create a tip calculator that allows users to input the bill amount and select a tip
+percentage. The app should calculate the total bill amount, including the tip. -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tip Calculator</title>
+
+    <script>
+      function calculateTip(){
+        let billAmount = parseFloat(document.getElementById("billAmount").value);
+        let tipPercent = parseFloat(document.getElementById("tipPercent").value);
+        if (isNaN(billAmount) || (tipPercent) <=0){
+          alert("Enter a valid amount");
+          return;
+        }
+        let tipAmount = billAmount * tipPercent;
+        let pay = billAmount + tipAmount;
+        document.getElementById("tipAmount").textContent = "Tip Amount : " + tipAmount
+        document.getElementById("pay").textContent = "Your Total Bill : " + pay;
+      }
+    </script>
+
+  </head>
+  <body>
+    <h2>Tip Calculator</h2>
+    <label for="billAmount">Enter your Bill Amount: </label>
+    <input type="number" id="billAmount" placeholder="Enter bill Amount">
+    <br>
+    <br>
+    <label for="tipPercent">Select Tip percentage: </label>
+    <select id="tipPercent">
+      <option value="0.1">10%</option>
+      <option value="0.15">15%</option>
+      <option value="0.2">20%</option>
+    </select>
+    <br>
+    <br>
+    <button onclick="calculateTip()">Calculate Tip</button>
+    <br>
+    <p id="tipAmount">TipAmount: </p>
+    <p id="pay">Total bill Amount: </p>
+  </body>
+</html>

@@ -1,0 +1,26 @@
+<!-- Assignment 7: Dynamic Color Changer
+Problem: Create a webpage where the user can change the background color of the page by
+selecting a color from an input field. -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic color changer</title>
+
+    <script>
+      function colorChange(){
+        let selectedcolor=document.getElementById("color").value;
+        document.body.style.backgroundColor = selectedcolor;
+      }
+    </script>
+
+  </head>
+  <body>
+    <h2>Dynamic Color Changer</h2>
+    <label from="colors">Choose a Color:</label>
+    <input type="color" id="color">
+    <button onclick="colorChange()">Change</button>
+  </body>
+</html>

@@ -1,0 +1,50 @@
+<!-- Assignment 13: Light/Dark Mode Toggle
+Objective: Build a simple web page that allows the user to toggle between light and dark modes.
+The page should switch between light and dark backgrounds and corresponding text colors when
+the user clicks a "Toggle Mode" button. -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Light/Dark Mode Toggle</title>
+  </head>
+  <body>
+    <h2>Light/Dark Mode Toggle</h2>
+    <button id="toggleMode"> Toggle Mode</button>
+
+    <script>
+      document.getElementById("toggleMode").addEventListener("click", function () {
+        document.body.classList.toggle("dark-mode");
+        document.body.classList.toggle("light-mode");
+      });
+
+        
+      document.body.classList.add("dark-mode");
+
+    </script>
+    <style>
+      body {
+        height: 700px;
+        margin: 0;
+      }
+
+      .light-mode {
+        background-color: white;
+        color: black;
+      }
+
+      .dark-mode {
+        background-color: black;
+        color: white;
+      }
+
+      button {
+        padding: 20px 30px;
+        font-size: 20px;
+        border-radius: 50px;
+      }    
+    </style>
+  </body>
+</html>

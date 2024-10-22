@@ -1,0 +1,45 @@
+<!--Assignment 3: Find the Largest Number
+Problem: Write a JavaScript function that takes three numbers as input from the user and
+displays the largest number.-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Largest Number</title>
+  
+    <script>
+  
+      function largest(){
+        let num1 = parseFloat(document.getElementById("number1").value);
+        let num2 = parseFloat(document.getElementById("number2").value);
+        let num3 = parseFloat(document.getElementById("number3").value);
+  
+        let largest;
+        if ((num1>=num2) && (num2>=num3)){
+          largest = num1;
+        }
+        else if ((num2>=num1)&&(num2>=num3)){
+          largest = num2;
+        }
+        else{
+          largest = num3;
+        }
+        document.getElementById("result").textContent = "The largest number is " + largest;
+      }
+  
+    </script>
+  </head>
+  <body>
+    <h2>Find the largest of three numbers</h2>
+    <p>Enter three numbers: </p>
+    <input type="number" id="number1" placeholder="Enter first number">
+    <input type="number" id="number2" placeholder="Enter second number">
+    <input type="number" id="number3" placeholder="Enter third number">
+  
+    <button onclick="largest()">Find Largest</button>
+    <p id="result"></p>
+  
+  </body>
+</html>

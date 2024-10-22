@@ -1,0 +1,60 @@
+<!-- Assignment 8: Simple Calculator
+Problem: Build a simple calculator with HTML and JavaScript that can perform basic
+operations such as addition, subtraction, multiplication, and division. -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+
+    <script>
+      function calculate(operation){
+        let num1 = parseFloat(document.getElementById("num1").value);
+        let num2 = parseFloat(document.getElementById("num2").value);
+        let result;
+        if (operation === "add"){
+          result = num1 + num2;
+        }
+        else if(operation === "subtract"){
+          result = num1-num2;
+        }
+        else if (operation === "multiply"){
+          result = num1*num2;
+        }
+        else if (operation === "divide"){
+          if (num2 === 0) {
+                    alert("Cannot divide by zero!");
+                    return;
+                }
+                result = num1 / num2;
+          result = num1/num2;
+        }
+        else{
+          alert("please select a valid operation");
+          return;
+        }
+        document.getElementById("result").textContent = "Result: " + result;
+      }
+    </script>
+
+  </head>
+  <body>
+    <h2>Simple Calculator</h2>
+    <label for="num1">Enter first Number:</label>
+    <input type="number" id="num1" placeholder="First Number"> <br><br>
+
+    <label for="num2">Enter second Number:</label>
+    <input type="number" id="num2" placeholder="Second number"> <br><br>
+
+    <label for="operation">Choose an option:</label>
+    
+    <button onclick="calculate('add')">Addition</button>
+    <button onclick="calculate('subtract')">Subtraction</button>
+    <button onclick="calculate('multiply')">Multiplication</button>
+    <button onclick="calculate('divide')">Division</button>
+    
+    <p id="result"></p>
+  </body>
+</html>

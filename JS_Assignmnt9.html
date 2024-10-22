@@ -1,0 +1,31 @@
+<!-- Assignment 9: Digital Clock
+Problem: Create a simple digital clock that displays the current time and updates every second. -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock</title>
+
+    <script>
+      function clock(){
+        let now = new Date();
+        let hours = now.getHours();
+        let minutes = now.getMinutes();
+        let seconds = now.getSeconds();
+        let timestring = hours + ":" + minutes + ":" + seconds;
+        document.getElementById('clock').textContent = timestring;
+      }
+      setInterval(clock,1000);
+      clock();
+    </script>
+
+  </head>
+
+  <body>
+    <h2>Digital Clock</h2>
+    <p id="clock"></p>
+  </body>
+
+</html>

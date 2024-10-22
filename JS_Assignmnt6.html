@@ -1,0 +1,41 @@
+<!-- Assignment 6: Countdown Timer
+Problem: Write a simple countdown timer using JavaScript. The user should input the number
+of seconds, and the timer should count down and display the time remaining.
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countdown Timer</title>
+
+    <script>
+
+      let countdown;
+      function timer(){
+        let timeRemaining = parseFloat(document.getElementById("seconds").value);
+      
+        clearInterval(countdown);
+
+        // setInterval is a JavaScript function that repeatedly runs a block of code at specified time intervals. In this case, the block of code inside the function() will run every 1000 milliseconds (1 second).
+        countdown = setInterval(function(){
+          document.getElementById("timer").textContent=timeRemaining + "seconds remaining";
+          timeRemaining--;
+          if (timeRemaining<0){
+            clearInterval(countdown);
+            document.getElementById("timer").textContent = "time is up!";
+          }
+        }, 1000);
+      }
+    </script>
+    
+  </head>
+  <body>
+      <h2>Coutdown Timer</h2>
+      <label for="seconds">Enter number of seconds: </label>
+      <input type="number" id="seconds" placeholder="Seconds">
+      <button onclick="timer()">Start Coutdown</button>
+      <p id="timer"></p>
+  </body>
+</html>

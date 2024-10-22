@@ -1,0 +1,64 @@
+<!-- Assignment 12: StopWatch
+Objective: Build a simple stopwatch that starts counting from 00:00 when the user clicks the
+"Start" button and stops when they click the "Stop" button. The user can also reset the time back
+to 00:00 by clicking "Reset." -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stopwatch</title>
+
+    <script>
+      let seconds = 0;
+      let minutes = 0;
+      let interval = null;
+      let isRunning = false;
+
+      function updateDisplay(){
+        const changedMinutes = (minutes < 10 ? "0" : "") + minutes;
+        const changedSeconds = (seconds < 10 ? "0" : "") + seconds;
+        document.getElementById("display").textContent = changedMinutes + ":" + changedSeconds;
+      }
+
+      function start(){
+        if (!isRunning) {
+          isRunning = true;
+          interval = setInterval(timer, 1000);
+        }
+      }
+      function stop(){
+        clearInterval(interval);
+        isRunning = false;
+      }
+
+      function restart(){
+        stop();
+        seconds = 0;
+        minutes = 0;
+        updateDisplay();
+      }
+      
+      function timer() {
+        seconds++;
+        if (seconds === 60) {
+          minutes++;
+          seconds = 0;
+        }
+        updateDisplay();
+      }
+
+    </script>
+
+  </head>
+  <body>
+    <h2>Stop Watch</h2>
+    <p id="display">00:00</p>
+    <button onclick="start()">Start</button>
+    <button onclick="stop()">Stop</button>
+    <button onclick="restart()">Restart</button>
+  </body>
+</html>
+
+  

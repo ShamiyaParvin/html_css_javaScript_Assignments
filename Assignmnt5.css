@@ -1,0 +1,45 @@
+body {
+  font-family: Arial, sans-serif; 
+  background-color: #f4f4f4; 
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  height: 100vh; 
+}
+
+.registrationform-container {
+  background: white; 
+  padding: 20px; 
+  border-radius: 5px; 
+  max-width: 400px; 
+  width: 100%; 
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+}
+
+h2 {
+  text-align: center; 
+}
+
+.form-group {
+  margin-bottom: 15px; 
+}
+
+input {
+  width: 100%; 
+  padding: 8px; 
+  margin-top: 5px; 
+  border: 1px solid #ccc; 
+}
+
+button {
+  background: #007bff; 
+  color: white; 
+  border: none; 
+  padding: 10px; 
+  width: 100%; 
+  cursor: pointer; 
+}
+
+button:hover {
+  background: #0056b3; 
+}

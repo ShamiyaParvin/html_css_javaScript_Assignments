@@ -1,0 +1,34 @@
+<!-- Assignment 15: Image Carousel
+Objective: Create an image carousel that allows users to click "Next" and "Previous" buttons to
+navigate through a set of images. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Carousel</title>
+</head>
+<body>
+    <h2>Image Carousel</h2>
+    <img id="carouselImage" src="image1.jpeg" alt="Carousel Image" width="400">
+    <br>
+    <button onclick="previousImage()">Previous</button>
+    <button onclick="nextImage()">Next</button>
+
+    <script>
+        var images = ["image1.jpeg", "image2.jpeg", "image3.jpg", "image4.jpg"];
+        var currentIndex = 0; // Index of the current image being displayed
+
+        function nextImage() {
+            currentIndex = (currentIndex + 1) % images.length;
+            document.getElementById("carouselImage").src = images[currentIndex];
+        }
+
+        function previousImage() {
+            currentIndex = (currentIndex - 1 + images.length) % images.length;
+            document.getElementById("carouselImage").src = images[currentIndex];
+        }
+    </script>
+</body>
+</html>

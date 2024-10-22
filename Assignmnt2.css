@@ -1,0 +1,79 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f8ff;
+  margin: 0;
+  padding: 20px;
+  text-align: center;
+}
+
+header {
+  background-color: #e0f7fa;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+h1 {
+  font-size: 2.5em;
+  color: #3b0f0f;
+}
+
+h2 {
+  color: #3b0f0f;
+}
+
+.biography, .skills {
+  margin: 20px 0;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: white;
+}
+
+p {
+  font-size: 1.2em;
+  color: #555;
+}
+
+ul {
+  list-style-type: none; 
+  padding-left: 20px; 
+  text-align: left; 
+  margin: 10px auto; /* Centered margin */
+  width: fit-content; /* Fit to the content */
+}
+
+ul li {
+  font-size: 1.1em;
+  margin: 10px 0;
+  color: #333;
+}
+
+footer {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #e0f7fa;
+  border-radius: 8px;
+}
+
+footer h2 {
+  margin: 0;
+}
+
+.social-links {
+  list-style-type: none; /* No bullet points*/
+  padding: 0;
+}
+
+.social-links li {
+  display: inline; /* to display links inline */
+  margin: 0 10px;
+}
+
+a {
+  text-decoration: none; /* Remove underline from link*/
+  color: #3b0f0f;
+}
+
+a:hover {
+  text-decoration: underline; /* Underline */
+}

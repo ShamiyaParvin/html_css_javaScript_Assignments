@@ -1,0 +1,38 @@
+<!-- Assignment 4: Basic To-Do List
+Problem: Create a basic to-do list using JavaScript. The user should be able to add tasks, and the
+tasks should be displayed below the input. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+
+    <script>
+      function addTask(){
+        let taskInput = document.getElementById("taskInput").value;
+        if (taskInput.trim() !== "") {
+          // creating new list item element
+          let listitem = document.createElement("li");
+          listitem.textContent = taskInput;
+          document.getElementById("taskList").appendChild(listitem);
+          document.getElementById("taskInput").value="";
+        }
+        else{
+          alert("Enter a task");
+        }
+      }
+    </script>
+  </head>
+
+  <body>
+    <h2>To-Do List</h2>
+    <input type="text" id="taskInput" placeholder="Enter a new task">
+    <button onclick="addTask()">Add task</button>
+
+    <ul id="taskList"></ul>
+  </body>
+
+</html>
